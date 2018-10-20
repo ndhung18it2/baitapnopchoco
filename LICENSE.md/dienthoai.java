@@ -1,4 +1,4 @@
-+package baitapso1;
+package baitapso1;
 public class dienthoai {
  String mahang;
  String tenhang; 
