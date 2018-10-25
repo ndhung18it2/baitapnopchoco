@@ -1,14 +1,14 @@
 package baitapso1;
 import java.util.Scanner;
-public class Banhang extends dienthoai {
-public static void nhapHoadon(dienthoai dienthoai) {
+public class Banhang extends Dienthoai {
+public static void nhapHoadon(Dienthoai dienthoai) {
 	Scanner key=new Scanner(System.in);
 	System.out.println("Mã hàng:  ");
 	dienthoai.mahang=key.nextLine();
 	System.out.println( "Tên hàng:  ");
 	dienthoai.tenhang=key.nextLine();
 	System.out.println("Đơn giá:  ");
-    dienthoai.dongia=key.nextInt();
+    dienthoai.dongia=key.nextLong();
 	System.out.println("Số lượng:  ");
 	dienthoai.soluong=key.nextInt();
  }
@@ -20,7 +20,7 @@ public static double tinhTien() {
 		tinhTien= (long) (dongia*soluong*0.9);
 	return tinhTien;
  }
-public static void inHoadon(dienthoai dienthoai) {
+public static void inHoadon(Dienthoai dienthoai) {
 	System.out.println(" Hóa đơn bán hàng: \n---------------------------\n -Mã hàng: "+dienthoai.mahang+"\n -Tên hàng: "
                                             +dienthoai.tenhang+"\n -Đơn giá: "
                                             +dienthoai.dongia+"\n -Số lượng: "+dienthoai.soluong 
@@ -28,7 +28,7 @@ public static void inHoadon(dienthoai dienthoai) {
                                             +tinhTien()+" Đồng");   
     }	
 public static void main(String[]args) {
-	dienthoai phone= new dienthoai();
+	Dienthoai phone= new Dienthoai();
 	nhapHoadon(phone);
 	inHoadon(phone);
     }
